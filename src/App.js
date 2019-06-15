@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.scss';
-import SearchField from '../SeachField/SearchField';
-import PokeList from '../PokeList/PokeList';
-import {fetchPokemons} from '../../services/FetchPokemons'
+import SearchField from './components/SeachField/SearchField';
+import PokeList from './components/PokeList/PokeList';
+import {fetchPokemons} from './services/FetchPokemons'
 
 class App extends React.Component {
   constructor(props) {
