@@ -34,7 +34,8 @@ class App extends React.Component {
       <div className="App">
         <ul className='pokemon__list'>  
           {
-            pokemons.map(item =>
+            pokemons.sort((a, b) => a.id - b.id)
+            .map(item =>
               <li key={item.id} id={item.id} className='list__item'>
                 <div className="img__container">
                   <img src={item.sprites.front_default} alt={item.name} className="pokemon__img"/>
@@ -50,8 +51,6 @@ class App extends React.Component {
 
                 </div>
               </li>
-
-            
             )
           }
           
