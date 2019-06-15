@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.scss';
 import SearchField from './components/SeachField/SearchField';
 import PokeList from './components/PokeList/PokeList';
-import {fetchPokemons} from './services/FetchPokemons'
+import {fetchPokemons} from './services/FetchPokemons';
+import './App.scss';
 
 class App extends React.Component {
   constructor(props) {
@@ -44,7 +44,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <h1 className="title">Pokedex</h1>
+        <h1 className="title">Pokédex</h1>
         <SearchField handleInputValue={this.handleInputValue} />
         <PokeList pokemons={pokemons} inputValue={inputValue} />
       </div>

@@ -1,12 +1,14 @@
 import React from 'react';
+import pikachu from '../../pikachu.png';
+import './SearchField.scss';
 
 class SearchField extends React.Component {
     render() {
       const {handleInputValue} = this.props;
       return (
         <div className="search__field">
-          <label htmlFor="" className="search__title">Busca</label>
-          <input type="text" onChange= {handleInputValue}/>
+          <label htmlFor="search" className="search__title"><img src={pikachu} alt="search" width= "75px" /></label>
+          <input type="text" id= "search" className="search__input" onChange= {handleInputValue} placeholder= "Introduce un nombre" />
         </div>
       );
     }

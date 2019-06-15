@@ -1,0 +1,91 @@
+.card__wrapper{
+    width: 200px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 5px 5px 5px  grey;
+}
+.img__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 65%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.pokemon__id{
+    position: relative;
+    right: 0;
+    bottom: -2px;
+    width: 50px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    background-color: rgb(244, 244, 244);
+    border-bottom: 1px solid rgb(244, 244, 244);
+    margin: 0;
+    padding: 5px 10px 0;
+    border-top-right-radius: 15px;
+    align-self: flex-start;
+}
+.info__container{
+    border-top: 1px solid black;
+    background-color: rgb(244, 244, 244);
+    height: 35%;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.pokemon__name{
+    margin: 8px;
+    text-transform: capitalize;
+}
+.types__list{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+.type__item{
+    border: 1px solid black;
+    background-color: rgb(230, 230, 230);
+    padding: 5px 10px;
+    border-radius: 10px;
+    line-height: 16px;
+    width: 70px;
+    box-sizing: border-box;
+}
+
+.poison {
+    background-color:rgb(157, 145, 77);
+}
+.poison-grass {
+    background-image: linear-gradient(90deg,  rgb(157, 145, 77) 50%, rgb(26, 187, 26) 50%);
+} 
+.poison-bug {
+    background-image: linear-gradient(90deg,  rgb(157, 145, 77) 50%, rgb(196, 120, 73) 50%);
+}
+.fire {
+    background-color: rgb(255, 132, 0);
+} 
+.flying-fire{
+    background-image: linear-gradient(90deg,  rgb(138, 211, 233) 50%, rgb(255, 132, 0) 50%);
+}
+ .flying-bug {
+    background-image: linear-gradient(90deg,  rgb(138, 211, 233) 50%, rgb(196, 120, 73) 50%);
+ }
+ .flying-normal {
+    background-image: linear-gradient(90deg,  rgb(138, 211, 233) 50%, rgb(200, 169, 227) 50%);
+ }
+.water{
+    background-color: rgb(93, 242, 244);
+} 
+.bug {
+    background-color: rgb(196, 120, 73);
+}   
+.normal{
+    background-color: rgb(200, 169, 227);
+} 
+.electric{
+    background-color: rgb(249, 255, 138);
+}  
