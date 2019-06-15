@@ -26,14 +26,34 @@ class App extends React.Component {
             this.fetchPokemonsInfo(item)
           )
         );
-
   }
 
   render() {
-
+      const {pokemons}= this.state;
     return (
       <div className="App">
-        <ul>  
+        <ul className='pokemon__list'>  
+          {
+            pokemons.map(item =>
+              <li key={item.id} id={item.id} className='list__item'>
+                <div className="img__container">
+                  <img src={item.sprites.front_default} alt={item.name} className="pokemon__img"/>
+                </div>
+                <p className="pokemon__id">ID/{item.id}</p>
+                <div className="info__container">
+                  <h1 className="pokemon__name">{item.name}</h1>
+                  <ul className="types__list">
+                  {item.types.map((item, index) => 
+                    <li className="type__item" key={index}>{item.type.name}</li>
+                    )}
+                  </ul>
+
+                </div>
+              </li>
+
+            
+            )
+          }
           
         </ul>
       </div>
