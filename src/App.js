@@ -45,9 +45,12 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <h1 className="title"><img className="title__logo" src={logo} alt= "Pokedex logo" /></h1>
+        <h1 className="title" id="top"><img className="title__logo" src={logo} alt= "Pokedex logo" /></h1>
         <SearchField handleInputValue={this.handleInputValue} />
         <PokeList pokemons={pokemons} inputValue={inputValue} />
+        <div className="link__top">
+        <a href="#top" className="link">⇧</a>
+        </div>
       </div>
     );
   }

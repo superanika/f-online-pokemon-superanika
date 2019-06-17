@@ -39,6 +39,8 @@
 .pokemon__name{
     margin: 8px;
     text-transform: capitalize;
+    text-align: center;
+
 }
 .types__list{
     list-style: none;
@@ -47,12 +49,8 @@
     padding: 0;
 }
 .type__item{
-    border: 1px solid black;
-    background-color: rgb(230, 230, 230);
-    padding: 5px 10px;
-    border-radius: 10px;
-    line-height: 16px;
-    width: 70px;
+    text-align: center;
+    font-size: 30px;
     box-sizing: border-box;
 }
 
