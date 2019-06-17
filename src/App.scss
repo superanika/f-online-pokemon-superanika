@@ -3,7 +3,10 @@ body {
   padding: 0;
 }
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
   background-image: linear-gradient(to bottom,lightgrey, white);
@@ -13,7 +16,17 @@ body {
 
 .title {
   color: white;
-  font-size: 60px;
   margin: 0;
   padding: 20px 0;
+  width: 300px;
+  height: 80px;
+  background-image: url('./images/Pokedex.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.title__logo {
+  width: 0;
+  height: 0;
+  position: relative;
+  top: -100px;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import pikachu from '../../pikachu.png';
+import pikachu from '../../images/pikachu.png';
 import './SearchField.scss';
 
 class SearchField extends React.Component {

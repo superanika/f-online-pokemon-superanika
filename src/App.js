@@ -3,6 +3,7 @@ import SearchField from './components/SeachField/SearchField';
 import PokeList from './components/PokeList/PokeList';
 import {fetchPokemons} from './services/FetchPokemons';
 import './App.scss';
+import {logo} from './images/Pokedex.png';
 
 class App extends React.Component {
   constructor(props) {
@@ -44,7 +45,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <h1 className="title"><img src="./Pokedex.png" alt= "Pokedex"  width="150px" /></h1>
+        <h1 className="title"><img className="title__logo" src={logo} alt= "Pokedex logo" /></h1>
         <SearchField handleInputValue={this.handleInputValue} />
         <PokeList pokemons={pokemons} inputValue={inputValue} />
       </div>
