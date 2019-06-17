@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.bcb18975.chunk.css",
-    "main.js": "./static/js/main.ae36144b.chunk.js",
-    "main.js.map": "./static/js/main.ae36144b.chunk.js.map",
+    "main.css": "./static/css/main.0c49bf9b.chunk.css",
+    "main.js": "./static/js/main.c6dec29b.chunk.js",
+    "main.js.map": "./static/js/main.c6dec29b.chunk.js.map",
     "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
     "runtime~main.js.map": "./static/js/runtime~main.d653cc00.js.map",
     "static/js/2.40dc30cc.chunk.js": "./static/js/2.40dc30cc.chunk.js",
     "static/js/2.40dc30cc.chunk.js.map": "./static/js/2.40dc30cc.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.913c871027bf34f0290480d5d486467b.js": "./precache-manifest.913c871027bf34f0290480d5d486467b.js",
+    "precache-manifest.cd6f234438062e0ce2931825eab4fe67.js": "./precache-manifest.cd6f234438062e0ce2931825eab4fe67.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.bcb18975.chunk.css.map": "./static/css/main.bcb18975.chunk.css.map",
+    "static/css/main.0c49bf9b.chunk.css.map": "./static/css/main.0c49bf9b.chunk.css.map",
     "static/media/App.scss": "./static/media/Pokedex.beb53ef3.png",
     "static/media/pikachu.png": "./static/media/pikachu.2ae99ccb.png"
   }
