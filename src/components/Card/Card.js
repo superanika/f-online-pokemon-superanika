@@ -33,10 +33,8 @@ class Card  extends React.Component {
                     }else {
                       return  <li className="type__item" key={index}>{item.type.name}</li>
                     }
-                  }
-                    )}
+                  })}
                   </ul>
-
                 </div>
             </div>
         );
