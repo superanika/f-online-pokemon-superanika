@@ -15,27 +15,25 @@ class Card  extends React.Component {
                   <ul className="types__list">
                   {item.types.map((item, index) => {
                     switch(item.type.name) {
-                      case "grass": 
+                      case 'grass': 
                          return  <li className="type__item" key={index}><span role="img" aria-label="grass" title="grass">🌱</span></li>
-                      case "poison":
+                      case 'poison':
                           return  <li className="type__item" key={index}><span role="img" aria-label="poison" title="poison">💀</span></li>
-
+                      case  'bug':
+                          return  <li className="type__item" key={index}><span role="img" aria-label="bug" title="bug">🐛</span></li>
+                      case 'fire':
+                          return  <li className="type__item" key={index}><span role="img" aria-label="fire" title="fire">🔥</span></li>
+                      case 'flying':
+                          return  <li className="type__item" key={index}><span role="img" aria-label="flying" title="flying">✈️</span></li>
+                      case 'normal':
+                          return  <li className="type__item" key={index}><span role="img" aria-label="normal" title="normal">🙂</span></li>
+                      case 'water':
+                          return  <li className="type__item" key={index}><span role="img" aria-label="water" title="water">💧</span></li>
+                      case 'electric':
+                          return  <li className="type__item" key={index}><span role="img" aria-label="electric" title="electric">⚡️</span></li>
+                      default:
+                          return  <li className="type__item" key={index}>{item.type.name}</li>
                     } 
-                    }else if (item.type.name === 'bug') {
-                      return  <li className="type__item" key={index}><span role="img" aria-label="bug" title="bug">🐛</span></li>
-                    }else if (item.type.name === 'fire') {
-                      return  <li className="type__item" key={index}><span role="img" aria-label="fire" title="fire">🔥</span></li>
-                    }else if (item.type.name === 'flying') {
-                     return  <li className="type__item" key={index}><span role="img" aria-label="flying" title="flying">✈️</span></li>
-                    }else if (item.type.name === 'normal') {
-                      return  <li className="type__item" key={index}><span role="img" aria-label="normal" title="normal">🙂</span></li>
-                    }else if (item.type.name === 'water') {
-                      return  <li className="type__item" key={index}><span role="img" aria-label="water" title="water">💧</span></li>
-                    }else if (item.type.name === 'electric') {
-                      return  <li className="type__item" key={index}><span role="img" aria-label="electric" title="electric">⚡️</span></li>
-                    }else {
-                      return  <li className="type__item" key={index}>{item.type.name}</li>
-                    }
                   })}
                   </ul>
                 </div>
