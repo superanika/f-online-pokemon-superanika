@@ -14,10 +14,13 @@ class Card  extends React.Component {
                   <h2 className="pokemon__name">{item.name}</h2>
                   <ul className="types__list">
                   {item.types.map((item, index) => {
-                    if(item.type.name === 'grass') {
-                      return  <li className="type__item" key={index}><span role="img" aria-label="grass" title="grass">🌱</span></li>
-                    }else if (item.type.name === 'poison') {
-                      return  <li className="type__item" key={index}><span role="img" aria-label="poison" title="poison">💀</span></li>
+                    switch(item.type.name) {
+                      case "grass": 
+                         return  <li className="type__item" key={index}><span role="img" aria-label="grass" title="grass">🌱</span></li>
+                      case "poison":
+                          return  <li className="type__item" key={index}><span role="img" aria-label="poison" title="poison">💀</span></li>
+
+                    } 
                     }else if (item.type.name === 'bug') {
                       return  <li className="type__item" key={index}><span role="img" aria-label="bug" title="bug">🐛</span></li>
                     }else if (item.type.name === 'fire') {

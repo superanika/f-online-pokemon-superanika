@@ -55,13 +55,14 @@
 
 .poison {
     background-color:rgb(157, 145, 77);
+    &-grass {
+        background-image: linear-gradient(90deg,  rgb(157, 145, 77) 50%, rgb(26, 187, 26) 50%);
+    }
+    &-bug {
+        background-image: linear-gradient(90deg,  rgb(157, 145, 77) 50%, rgb(196, 120, 73) 50%);
+    }
 }
-.poison-grass {
-    background-image: linear-gradient(90deg,  rgb(157, 145, 77) 50%, rgb(26, 187, 26) 50%);
-} 
-.poison-bug {
-    background-image: linear-gradient(90deg,  rgb(157, 145, 77) 50%, rgb(196, 120, 73) 50%);
-}
+
 .fire {
     background-color: rgb(255, 132, 0);
 } 
