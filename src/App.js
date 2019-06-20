@@ -27,10 +27,11 @@ class App extends React.Component {
   componentDidMount () {
       fetchPokemons()
       .then(data => 
-        data.results.map(item =>
-          this.fetchPokemonsInfo(item)
+        this.setState ({
+          pokemons: data
+        })
+      
         )
-      );
   }
 
   handleInputValue (event) {

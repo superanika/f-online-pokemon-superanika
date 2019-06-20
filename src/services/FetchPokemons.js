@@ -15,7 +15,7 @@ const fetchPokemons = () => {
         .then(response => {
                return  response.json()
                             .forEach(item => {
-                                  fetchPokemonsInfo(item).then(response => pokemons = [... pokemons, response.json()])
+                                  fetchPokemonsInfo(item).then(response => pokemons = [...pokemons, response.json()])
 
                         })
             })
