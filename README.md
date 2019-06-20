@@ -16,7 +16,7 @@ It also has a search input where you can search pokemons by name.
 
 At the bottom you can find a button that takes you to the top of the page again.
 
-This site has a responsible design so it can fit all devices' sizes.
+This site has a responsive design so it can fit all devices' sizes.
 
 You can clone this project clicking on the green clone button or with this link:
 
