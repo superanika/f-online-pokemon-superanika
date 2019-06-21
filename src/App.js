@@ -15,13 +15,23 @@ class App extends React.Component {
     this.handleInputValue= this.handleInputValue.bind(this);
   }
 
-  fetchPokemonsInfo (item) {
+  fetchPokemonsInfo(item) {
       fetch(`${item.url}`)
       .then(response => response.json())
-      .then(data => this.setState ({
-        pokemons: [...this.state.pokemons, data]
-      })
+      .then(data => 
+        this.fetchEvolutions(data)
       )
+  }
+  fetchEvolutions (pokemon) {
+    fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemon.id}`)
+    .then(response => response.json())
+    .then(pokemonEvolution => {
+        pokemon.evolution = pokemonEvolution.evolves_from_species;
+        this.setState ({
+          pokemons: [...this.state.pokemons, pokemon]
+        })
+      }
+    )
   }
 
   componentDidMount () {
