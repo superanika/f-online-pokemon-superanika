@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchField from './components/SeachField/SearchField';
+import SearchField from './components/SearchField/SearchField';
 import PokeList from './components/PokeList/PokeList';
 import {fetchPokemons} from './services/FetchPokemons';
 import './App.scss';
