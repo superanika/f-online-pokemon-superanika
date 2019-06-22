@@ -53,7 +53,6 @@ class App extends React.Component {
 
   render() {
       const {pokemons, inputValue}= this.state;
-      const {handleInputValue} = this.props;
 
     return (
       <div className="App">
@@ -62,7 +61,7 @@ class App extends React.Component {
           <Route exact path="/" render={() => (
             <Home pokemons={pokemons} 
                   inputValue={inputValue} 
-                  handleInputValue= {handleInputValue}  /> 
+                  handleInputValue= {this.handleInputValue}  /> 
                   )}
           />
           <Route path="/DetailCard/:name" render={routerProps => (

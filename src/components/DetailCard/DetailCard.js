@@ -8,7 +8,7 @@ class DetailCard extends React.Component {
         return (
             pokemons.map(item =>
                 item.name === this.props.match.params.name ?
-                    <div className="detailCard__wrapper">
+                    <div className="detailCard__wrapper" key={item.id}>
                         <div className={item.types.length === 2 ? `pic__container ${item.types[0].type.name}-${item.types[1].type.name}` : `pic__container ${item.types[0].type.name}`}>
                             <p className="message">hover me to see my back!</p>
                             <img src={item.sprites.front_default} alt={item.name} className="pokemon__pic" onMouseEnter={e => (e.currentTarget.src = item.sprites.back_default)} onMouseOut={e => (e.currentTarget.src = item.sprites.front_default)}/>

@@ -13,7 +13,7 @@ class Home extends React.Component {
                 <SearchField handleInputValue={handleInputValue} inputValue={inputValue} />
                 <PokeList pokemons={pokemons} inputValue={inputValue} />
                 <div className="link__top">
-                <a href="#top" className="link">⇧</a>
+                <a href="/" className="link">⇧</a>
                 </div>
             </React.Fragment>
         );
