@@ -4,6 +4,7 @@ import './App.scss';
 import {logo} from './images/Pokedex.png';
 import { Route, Switch } from 'react-router-dom';
 import Home from './components/Home/Home';
+import DetailCard from './components/DetailCard/DetailCard';
 
 class App extends React.Component {
   constructor(props) {
@@ -57,7 +58,19 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1 className="title" id="top"><img className="title__logo" src={logo} alt= "Pokedex logo" /></h1>
-        <Home pokemons={pokemons} inputValue={inputValue} handleInputValue= {handleInputValue}  />
+        <Switch>
+          <Route exact path="/" render={() => (
+            <Home pokemons={pokemons} 
+                  inputValue={inputValue} 
+                  handleInputValue= {handleInputValue}  /> 
+                  )}
+          />
+          <Route path="/DetailCard/:name" render={routerProps => (
+            <DetailCard  pokemons = {pokemons} 
+                          match={routerProps.match} />
+                          )}
+          />
+        </Switch>
       </div>
     );
   }

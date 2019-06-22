@@ -1,0 +1,44 @@
+.detailCard__wrapper {
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 0 15px grey;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.pic__container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 50%;
+}
+
+.pokemon__pic {
+    width: 150px;
+    height: 150px;
+}
+.message {
+    margin-top: 20px;
+    position: relative;
+    border-radius: 15px;
+    background-color: white;
+    padding: 15px;
+}
+.message:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 30%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: white;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}

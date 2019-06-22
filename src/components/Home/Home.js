@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchField from '../SearchField/SearchField';
 import PokeList from '../PokeList/PokeList';
+import './Home.scss';
 
 
 class Home extends React.Component {
@@ -9,7 +10,7 @@ class Home extends React.Component {
 
         return (
             <React.Fragment>
-                <SearchField handleInputValue={handleInputValue} />
+                <SearchField handleInputValue={handleInputValue} inputValue={inputValue} />
                 <PokeList pokemons={pokemons} inputValue={inputValue} />
                 <div className="link__top">
                 <a href="#top" className="link">⇧</a>

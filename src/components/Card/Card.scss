@@ -1,3 +1,7 @@
+.Details__link {
+    text-decoration: none;
+    color: black;
+}
 .card__wrapper{
     width: 200px;
     height: 300px;
@@ -8,7 +12,7 @@
     &:hover {
         width: 210px;
         height: 310px;
-        box-shadow: 0 0 15px  grey;
+        box-shadow: 0 0 15px  rgb(206, 187, 45);
         .pokemon__img {
             width: 150px;
         }
