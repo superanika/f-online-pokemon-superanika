@@ -1,9 +1,9 @@
 import React from 'react';
-import SearchField from './components/SearchField/SearchField';
-import PokeList from './components/PokeList/PokeList';
 import {fetchPokemons} from './services/FetchPokemons';
 import './App.scss';
 import {logo} from './images/Pokedex.png';
+import { Route, Switch } from 'react-router-dom';
+import Home from './components/Home/Home';
 
 class App extends React.Component {
   constructor(props) {
@@ -52,15 +52,12 @@ class App extends React.Component {
 
   render() {
       const {pokemons, inputValue}= this.state;
+      const {handleInputValue} = this.props;
 
     return (
       <div className="App">
         <h1 className="title" id="top"><img className="title__logo" src={logo} alt= "Pokedex logo" /></h1>
-        <SearchField handleInputValue={this.handleInputValue} />
-        <PokeList pokemons={pokemons} inputValue={inputValue} />
-        <div className="link__top">
-        <a href="#top" className="link">⇧</a>
-        </div>
+        <Home pokemons={pokemons} inputValue={inputValue} handleInputValue= {handleInputValue}  />
       </div>
     );
   }

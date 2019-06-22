@@ -5,6 +5,14 @@
     border-radius: 15px;
     margin: 20px;
     box-shadow: 5px 5px 5px  grey;
+    &:hover {
+        width: 210px;
+        height: 310px;
+        box-shadow: 0 0 15px  grey;
+        .pokemon__img {
+            width: 150px;
+        }
+    }
 }
 .img__container{
     display: flex;
