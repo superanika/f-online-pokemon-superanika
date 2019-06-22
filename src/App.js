@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchField from './components/SeachField/SearchField';
+import SearchField from './components/SearchField/SearchField';
 import PokeList from './components/PokeList/PokeList';
 import {fetchPokemons} from './services/FetchPokemons';
 import './App.scss';
@@ -15,23 +15,14 @@ class App extends React.Component {
     this.handleInputValue= this.handleInputValue.bind(this);
   }
 
-  fetchPokemonsInfo (item) {
-      fetch(`${item.url}`)
-      .then(response => response.json())
-      .then(data => this.setState ({
-        pokemons: [...this.state.pokemons, data]
-      })
-      )
-  }
-
   componentDidMount () {
-      fetchPokemons()
-      .then(data => 
+    fetchPokemons()
+      .then(data => {
+        console.log(data)
         this.setState ({
           pokemons: data
         })
-      
-        )
+      })
   }
 
   handleInputValue (event) {

@@ -1,25 +1,26 @@
 const ENDPOINT = 'https://pokeapi.co/api/v2/pokemon/?limit=25';
-const fetchPokemonsInfo = (item) => {
-    fetch(`${item.url}`)
-    .then(response => response.json())
-    .then(data => this.setState ({
-      pokemons: [...this.state.pokemons, data]
-    })
-    )
-}
 
 const fetchPokemons = () => {
     let pokemons = [];
-
-    fetch(ENDPOINT)
-        .then(response => {
-               return  response.json()
-                            .forEach(item => {
-                                  fetchPokemonsInfo(item).then(response => pokemons = [...pokemons, response.json()])
-
-                        })
-            })
-    return pokemons;
-    }
+    return fetch(ENDPOINT)
+        .then(response => response.json())
+        .then(data => {
+            data.results.forEach(item => {
+                let pokemon = fetch(`${item.url}`)
+                    .then(response => response.json())
+                    .then(pokemon =>
+                        fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemon.id}`)
+                            .then(response => response.json())
+                            .then(pokemonEvolution => {
+                                pokemon.evolution = pokemonEvolution.evolves_from_species;
+                                return pokemon;
+                            })
+                    )
+                pokemons.push(pokemon);
+            });
+            return Promise.all(pokemons).then((values) => values);
+        })
+}
 
 export { fetchPokemons };
+
