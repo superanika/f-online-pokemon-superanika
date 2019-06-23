@@ -50,13 +50,14 @@ class App extends React.Component {
       inputValue: value
     })
   }
+  
 
   render() {
       const {pokemons, inputValue}= this.state;
 
     return (
       <div className="App">
-        <h1 className="title" id="top"><img className="title__logo" src={logo} alt= "Pokedex logo" /></h1>
+        <h1 className="title" ><img className="title__logo" src={logo} alt= "Pokedex logo" /></h1>
         <Switch>
           <Route exact path="/" render={() => (
             <Home pokemons={pokemons} 

@@ -5,6 +5,11 @@ import './Home.scss';
 
 
 class Home extends React.Component {
+   
+    focus() {
+        window.scrollTo(0, 0);
+    }
+
     render() {
         const {pokemons, inputValue, handleInputValue}= this.props;
 
@@ -12,8 +17,8 @@ class Home extends React.Component {
             <React.Fragment>
                 <SearchField handleInputValue={handleInputValue} inputValue={inputValue} />
                 <PokeList pokemons={pokemons} inputValue={inputValue} />
-                <div className="link__top">
-                <a href="/" className="link">⇧</a>
+                <div className="link" onClick={this.focus}>
+                    <i className="fas fa-arrow-up arrow__link"></i>
                 </div>
             </React.Fragment>
         );

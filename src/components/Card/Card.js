@@ -38,7 +38,7 @@ class Card  extends React.Component {
                     } 
                   })}
                   </ul>
-                  {item.evolution === null ? '' : <p className="evolution">Evoluciona de <span className="poke__evo">{item.evolution.name}</span></p>}
+                  {item.evolution === null ? '' : <p className="evolution">Evolves from <span className="poke__evo">{item.evolution.name}</span></p>}
                 </div>
             </div>
           </Link>  

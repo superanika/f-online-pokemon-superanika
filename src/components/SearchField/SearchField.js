@@ -8,7 +8,7 @@ class SearchField extends React.Component {
       return (
         <div className="search__field">
           <label htmlFor="search" className="search__title"><img className="pikachu" src={pikachu} alt="search" /></label>
-          <input type="text" id= "search" className="search__input" onChange= {handleInputValue}  placeholder= "Introduce un nombre" />
+          <input type="text" id= "search" className="search__input" onChange= {handleInputValue}  placeholder= "Search by name" />
         </div>
       );
     }
