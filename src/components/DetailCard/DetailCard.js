@@ -1,6 +1,8 @@
 import React from 'react';
 import './DetailCard.scss';
 import {Link} from 'react-router-dom';
+import {Colors} from '../Colors.js';
+
 
 class DetailCard extends React.Component {
     render() {
@@ -12,7 +14,7 @@ class DetailCard extends React.Component {
                 {pokemons.map(item =>
                     item.name === this.props.match.params.name ?
                         <div className="detailCard__wrapper" key={item.id}>
-                            <div className={item.types.length === 2 ? `pic__container ${item.types[0].type.name}-${item.types[1].type.name}` : `pic__container ${item.types[0].type.name}`}>
+                             <div className="pic__container" style={item.types.length === 2 ? {backgroundImage: `linear-gradient(90deg, ${Colors[item.types[0].type.name]} 50%, ${Colors[item.types[1].type.name]} 50%)`} : {backgroundColor: Colors[item.types[0].type.name]}} >
                                 <Link to="/" className="back__arrow"><i className="fas fa-times-circle"></i></Link>
                                 <p className="message">hover me to see my back!</p>
                                 <img src={item.sprites.front_default} alt={item.name} className="pokemon__pic" onMouseEnter={e => (e.currentTarget.src = item.sprites.back_default)} onMouseOut={e => (e.currentTarget.src = item.sprites.front_default)}/>

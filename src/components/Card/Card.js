@@ -1,6 +1,7 @@
 import React from 'react';
 import './Card.scss';
 import {Link} from 'react-router-dom';
+import {Colors} from '../Colors.js';
 
 class Card  extends React.Component {
     render () {
@@ -8,7 +9,7 @@ class Card  extends React.Component {
         return (
           <Link to={`/DetailCard/${item.name}`} className="Details__link">
             <div className="card__wrapper">
-                 <div className={item.types.length === 2 ? `img__container ${item.types[0].type.name}-${item.types[1].type.name}` : `img__container ${item.types[0].type.name}`}>
+                  <div className="img__container" style={item.types.length === 2 ? {backgroundImage: `linear-gradient(90deg, ${Colors[item.types[0].type.name]} 50%, ${Colors[item.types[1].type.name]} 50%)`} : {backgroundColor: Colors[item.types[0].type.name]}} >
                   <img src={item.sprites.front_default} alt={item.name} className="pokemon__img"/>
                   <p className="pokemon__id">ID/{item.id}</p>
                 </div>
