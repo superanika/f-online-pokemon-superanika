@@ -6,7 +6,7 @@ import './Home.scss';
 
 class Home extends React.Component {
    
-    focus() {
+    scroll() {
         window.scrollTo(0, 0);
     }
 
@@ -17,7 +17,7 @@ class Home extends React.Component {
             <React.Fragment>
                 <SearchField handleInputValue={handleInputValue} inputValue={inputValue} />
                 <PokeList pokemons={pokemons} inputValue={inputValue} />
-                <div className="link" onClick={this.focus}>
+                <div className="link" onClick={this.scroll}>
                     <i className="fas fa-arrow-up arrow__link"></i>
                 </div>
             </React.Fragment>
