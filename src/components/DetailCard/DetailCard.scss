@@ -1,0 +1,100 @@
+
+
+.detailCard__wrapper {
+    width: 300px;
+    height: 450px;
+    box-shadow: 0 0 15px grey;
+    border-radius: 15px;
+    box-sizing: border-box;
+    animation: fade_in 2s;
+}
+
+.pic__container {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 50%;
+}
+.back__arrow {
+    font-size: 30px;
+    align-self: flex-end;
+    color: grey;
+    margin: 5px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.pokemon__pic {
+    width: 150px;
+    height: 150px;
+}
+.message {
+    position: relative;
+    border-radius: 15px;
+    background-color: white;
+    padding: 15px;
+    margin: 0;
+}
+.message:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 30%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: white;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+.poke__size {
+    display: flex;
+    justify-content: space-around;
+}
+.poke__height {
+    margin: 5px;
+}
+.poke__weight {
+    margin: 5px;
+}
+.ability__title {
+    text-align: center;
+    margin: 5px;
+}
+.abilities__list {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.ability__item {
+    border: 1px solid grey;
+    background-color: rgb(232, 230, 230);
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+.evolution__detail {
+    text-align: center;
+    padding-top: 10px;
+}
+.evo__link{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+    font-size: 24px;
+}
+
+@keyframes fade_in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+

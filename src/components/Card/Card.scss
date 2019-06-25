@@ -1,17 +1,29 @@
+.Details__link {
+    text-decoration: none;
+    color: black;
+}
 .card__wrapper{
     width: 200px;
-    height: 250px;
+    height: 300px;
     border: 1px solid black;
     border-radius: 15px;
     margin: 20px;
     box-shadow: 5px 5px 5px  grey;
+    &:hover {
+        width: 210px;
+        height: 310px;
+        box-shadow: 0 0 15px  rgb(206, 187, 45);
+        .pokemon__img {
+            width: 150px;
+        }
+    }
 }
 .img__container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    height: 65%;
+    height: 55%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -32,9 +44,11 @@
 .info__container{
     border-top: 1px solid black;
     background-color: rgb(244, 244, 244);
-    height: 35%;
+    height: 45%;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+    display: flex;
+    flex-direction: column;
 }
 .pokemon__name{
     margin: 8px;
@@ -49,41 +63,18 @@
 }
 .type__item{
     text-align: center;
-    font-size: 30px;
+    font-size: 22px;
     box-sizing: border-box;
 }
 
-.poison {
-    background-color:rgb(157, 145, 77);
-    &-grass {
-        background-image: linear-gradient(90deg,  rgb(157, 145, 77) 50%, rgb(26, 187, 26) 50%);
-    }
-    &-bug {
-        background-image: linear-gradient(90deg,  rgb(157, 145, 77) 50%, rgb(196, 120, 73) 50%);
-    }
+.evolution {
+    width: 50%;
+    border-left: 5px solid grey;
+    padding-left: 5px;
+    margin: 5px 0 0 10px;
+    align-self: flex-start;
 }
-
-.fire {
-    background-color: rgb(255, 132, 0);
-} 
-.flying-fire{
-    background-image: linear-gradient(90deg,  rgb(138, 211, 233) 50%, rgb(255, 132, 0) 50%);
+.poke__evo {
+    text-transform: capitalize;
+    font-size: 20px;
 }
- .flying-bug {
-    background-image: linear-gradient(90deg,  rgb(138, 211, 233) 50%, rgb(196, 120, 73) 50%);
- }
- .flying-normal {
-    background-image: linear-gradient(90deg,  rgb(138, 211, 233) 50%, rgb(200, 169, 227) 50%);
- }
-.water{
-    background-color: rgb(93, 242, 244);
-} 
-.bug {
-    background-color: rgb(196, 120, 73);
-}   
-.normal{
-    background-color: rgb(200, 169, 227);
-} 
-.electric{
-    background-color: rgb(249, 255, 138);
-}  
