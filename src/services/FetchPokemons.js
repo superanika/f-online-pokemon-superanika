@@ -18,7 +18,7 @@ const fetchPokemons = () => {
                     )
                 pokemons.push(pokemon);
             });
-            return Promise.all(pokemons).then((values) => values);
+            return Promise.all(pokemons);
         })
 }
 

@@ -18,7 +18,6 @@ class App extends React.Component {
   componentDidMount () {
     fetchPokemons()
       .then(data => {
-        console.log(data)
         this.setState ({
           pokemons: data
         })
