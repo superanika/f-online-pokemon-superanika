@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import SearchField from './components/SearchField/SearchField';
-import PokeList from './components/PokeList/PokeList';
-=======
->>>>>>> master
 import {fetchPokemons} from './services/FetchPokemons';
 import './App.scss';
 import {logo} from './images/Pokedex.png';
@@ -21,28 +16,6 @@ class App extends React.Component {
     this.handleInputValue= this.handleInputValue.bind(this);
   }
 
-<<<<<<< HEAD
-=======
-  fetchPokemonsInfo(item) {
-      fetch(`${item.url}`)
-      .then(response => response.json())
-      .then(data => 
-        this.fetchEvolutions(data)
-      )
-  }
-  fetchEvolutions (pokemon) {
-    fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemon.id}`)
-    .then(response => response.json())
-    .then(pokemonEvolution => {
-        pokemon.evolution = pokemonEvolution.evolves_from_species;
-        this.setState ({
-          pokemons: [...this.state.pokemons, pokemon]
-        })
-      }
-    )
-  }
-
->>>>>>> master
   componentDidMount () {
     fetchPokemons()
       .then(data => {
